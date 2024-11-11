@@ -1,0 +1,132 @@
+/* Estilos generales para el formulario de login */
+.login-container {
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+  transition: all 0.3s ease;
+}
+
+h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #2c3e50;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}
+
+/* Animación de aparición del contenedor */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input {
+  padding: 14px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Efectos de foco en los inputs */
+input:focus {
+  outline: none;
+  border-color: #3498db;
+  background-color: #eef7ff;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+}
+
+/* Estilo del mensaje de error */
+.error {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Estilo para el botón de login */
+button {
+  padding: 15px 25px;
+  background: linear-gradient(45deg, #3498db, #8e44ad);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+}
+
+/* Efecto hover y focus en el botón */
+button:hover {
+  background: linear-gradient(45deg, #2980b9, #9b59b6);
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.7);
+}
+
+/* Efectos generales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #ecf0f1;
+  color: #34495e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2980b9, #8e44ad);
+}
+
+h1 {
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+}

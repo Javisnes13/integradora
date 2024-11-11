@@ -1,10 +1,10 @@
-import express from "express";
-import { CuestionariosModel } from "../models/UsersModels.js";
+import express from 'express';
+import { CuestionariosModel } from '../models/UsersModels.js';
 
 const router = express.Router();
 
 // Ruta para obtener todos los cuestionarios
-router.get("/", async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const cuestionarios = await CuestionariosModel.find();
     res.json(cuestionarios);
@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
 });
 
 // Ruta para crear un nuevo cuestionario
-router.post("/", async (req, res) => {
+router.post('/', async (req, res) => {
   const cuestionario = new CuestionariosModel(req.body);
   try {
     const nuevoCuestionario = await cuestionario.save();

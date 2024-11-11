@@ -1,10 +1,10 @@
-import express from "express";
-import { UsuariosModel } from "../models/UsersModels.js";
+import express from 'express';
+import { UsuariosModel } from '../models/UsersModels.js';
 
 const router = express.Router();
 
 // Ruta para obtener todos los usuarios
-router.get("/", async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const usuarios = await UsuariosModel.find();
     res.json(usuarios);
@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
 });
 
 // Ruta para crear un nuevo usuario
-router.post("/", async (req, res) => {
+router.post('/', async (req, res) => {
   const usuario = new UsuariosModel(req.body);
   try {
     const nuevoUsuario = await usuario.save();

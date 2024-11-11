@@ -1,10 +1,10 @@
-import express from "express";
-import { RespuestasModel } from "../models/UsersModels.js"; // Asegúrate de crear el modelo
+import express from 'express';
+import { RespuestasModel } from '../models/UsersModels.js';
 
 const router = express.Router();
 
 // Ruta para obtener todas las respuestas
-router.get("/", async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const respuestas = await RespuestasModel.find();
     res.json(respuestas);
@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
 });
 
 // Ruta para crear una nueva respuesta
-router.post("/", async (req, res) => {
+router.post('/', async (req, res) => {
   const respuesta = new RespuestasModel(req.body);
   try {
     const nuevaRespuesta = await respuesta.save();
